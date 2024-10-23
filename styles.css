@@ -183,7 +183,7 @@ h6 {
 }
 
 .title-medium {
-  font-size: 40px;
+  font-size: clamp(20px, 2.08vw, 40px);
   line-height: 1.3;
   color: var(--color-light);
 }
@@ -198,6 +198,7 @@ h6 {
   line-height: 2;
   letter-spacing: 1.2px;
   text-transform: uppercase;
+  text-decoration: none;
   background-color: var(--color-light);
   border: none;
   border-radius: var(--border-radius);
@@ -401,8 +402,48 @@ h6 {
   text-stroke: 1px var(--color-light-gray);
 }
 
+.motivation-card-title:not(:last-child) {
+  margin-bottom: 14px;
+}
+
 .motivation-card-description {
   max-width: 400px;
+}
+
+.motivation-card-description:not(:last-child) {
+  margin-bottom: 37px;
+}
+
+.button.transparent {
+  height: var(--input-height);
+  padding-left: 31px;
+  padding-right: 80px;
+  background-color: transparent;
+  border: var(--border);
+  position: relative;
+}
+
+.button.transparent::after {
+  content: "";
+  height: 100%;
+  aspect-ratio: 1;
+  background: url("./icons/aroow-top-right.svg") center/70% no-repeat;
+  border: var(--border);
+  border-radius: 50%;
+
+  position: absolute;
+  right: 0;
+}
+
+.button.transparent:hover {
+  color: var(--color-dark);
+  background-color: var(--color-light-gray);
+}
+
+@media (max-width: 1919px) {
+  .motivation-card-image {
+    margin-block: -20px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -433,6 +474,16 @@ h6 {
   .banner {
     row-gap: 10px;
   }
+
+  .motivation-card {
+    padding-block: 50px;
+  }
+
+  .motivation-card-image {
+    max-width: 30%;
+    height: auto;
+    margin-block: 0;
+  }
 }
 
 @media (max-width: 767px) {
@@ -461,5 +512,23 @@ h6 {
 
   .banner-info::before {
     margin-right: 10px;
+  }
+
+  .motivation-card,
+  .motivation-item:nth-child(even) .motivation-card {
+    flex-direction: column-reverse;
+  }
+
+  .motivation-card {
+    row-gap: 30px;
+    padding-block: 30px;
+  }
+
+  .motivation-card-image {
+    max-width: 60%;
+  }
+
+  .motivation-cart-description:not(:last-child) {
+    margin-bottom: 20px;
   }
 }
