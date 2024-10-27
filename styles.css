@@ -440,6 +440,15 @@ h6 {
   background-color: var(--color-light-gray);
 }
 
+.training-types {
+  position: relative;
+  min-width: 1920px;
+  margin-inline: auto;
+  background-color: var(--color-dark);
+  padding-top: 70px;
+  padding-bottom: 120px;
+}
+
 @media (max-width: 1919px) {
   .motivation-card-image {
     margin-block: -20px;
