@@ -39,6 +39,7 @@ body,
 
 :where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl):where([class]) {
   margin-block: 0;
+  color: var(--color-light);
 }
 
 :where(dd[class]) {
@@ -186,6 +187,10 @@ h6 {
   font-size: clamp(20px, 2.08vw, 40px);
   line-height: 1.3;
   color: var(--color-light);
+}
+
+.title-big {
+  font-size: clamp(24px, 3.12vw, 60px);
 }
 
 .button {
@@ -402,6 +407,12 @@ h6 {
   text-stroke: 1px var(--color-light-gray);
 }
 
+.backdrop-title.centered::after {
+  top: -0.55em;
+  left: 50%;
+  translate: -50% 0;
+}
+
 .motivation-card-title:not(:last-child) {
   margin-bottom: 14px;
 }
@@ -421,6 +432,7 @@ h6 {
   background-color: transparent;
   border: var(--border);
   position: relative;
+  color: var(--color-light);
 }
 
 .button.transparent::after {
@@ -440,18 +452,161 @@ h6 {
   background-color: var(--color-light-gray);
 }
 
+.input {
+  width: 100%;
+  height: var(--input-height);
+  padding-inline: 25px;
+  background-color: transparent;
+  color: var(--color-light);
+  border: 1px solid var(--color-light-gray);
+  border-radius: var(--border-radius);
+}
+
+.input::placeholder {
+  color: var(--color-light-gray);
+}
+
+.input:hover {
+  border-color: var(--color-light);
+}
+
+.input:focus {
+  outline: none;
+}
+
 .training-types {
   position: relative;
-  min-width: 1920px;
   margin-inline: auto;
   background-color: var(--color-dark);
   padding-top: 70px;
   padding-bottom: 120px;
 }
 
+.training-types-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 60px;
+}
+
+.training-types-item {
+  --trainingTypesItemBgIconSize: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 32px;
+  padding-top: var(--trainingTypesItemBgIconSize);
+  background: url("./icons/transparent-arrow-bottom-left.svg") 100% 0 /
+    var(--trainingTypesItemBgIconSize) no-repeat;
+}
+
+.training-types-item-title {
+  font-size: 16px;
+  color: var();
+}
+
+.join-us-video-wrapper {
+  background: url("./images/join-us/join-us-bg.jpg") center/cover no-repeat
+    var(--color-dark-alternate);
+  padding: 150px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.join-us-video-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+
+  width: 200px;
+  aspect-ratio: 1;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 4px;
+
+  background-color: transparent;
+  border: var(--border);
+  border-radius: 50%;
+
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--color-light);
+}
+
+.join-us-video-play-button::after {
+  content: "";
+  width: 26px;
+  aspect-ratio: 1;
+  background: url("./icons/aroow-top-right.svg") center/contain no-repeat;
+}
+
+.join-us-video-play-button:hover {
+  color: var(--color-dark);
+  background-color: var(--color-light-gray);
+}
+
+.join-us-body {
+  padding-bottom: 150px;
+}
+
+.join-us-title {
+  position: relative;
+  margin-top: -0.4em;
+  font-size: clamp(64px, 9.27vw, 180px);
+  line-height: 1;
+  text-align: center;
+}
+
+.join-us-title:not(:last-child) {
+  margin-bottom: 130px;
+}
+
+.join-us-form-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 7px;
+}
+
+.join-us-form-header:not(:last-child) {
+  margin-bottom: 52px;
+}
+
+.join-us-title::after {
+  display: inline-block;
+  content: "";
+  height: 0.7em;
+  aspect-ratio: 1;
+  background: url("./icons/bold-arrow-down-right.svg") center/contain no-repeat;
+  scale: 1 -1;
+  margin-left: 0.14em;
+}
+
+.join-us-form-subtitle {
+  font-size: 20px;
+  line-height: 1.65;
+  text-transform: uppercase;
+  color: var(--color-light);
+}
+
+.join-us-from-input {
+  max-width: 400px;
+}
+
 @media (max-width: 1919px) {
   .motivation-card-image {
     margin-block: -20px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .training-types-list {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -539,5 +694,19 @@ h6 {
 
   .motivation-cart-description:not(:last-child) {
     margin-bottom: 20px;
+  }
+
+  .training-types-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .training-types-item {
+    --trainingTypesItemBgIconSize: 50px;
+    row-gap: 10px;
+  }
+
+  .training-types-image {
+    max-width: 120px;
   }
 }
