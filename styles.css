@@ -398,9 +398,10 @@ h6 {
   content: attr(data-title);
   position: absolute;
   z-index: -1;
-  top: -0.45em;
+  top: -0.3em;
   left: -0.6em;
   font-size: 2.8em;
+  line-height: 1;
   font-family: var(--font-damily-accent);
   color: transparent;
   -webkit-text-stroke: 1px var(--color-light-gray);
@@ -408,7 +409,7 @@ h6 {
 }
 
 .backdrop-title.centered::after {
-  top: -0.55em;
+  top: -0.25em;
   left: 50%;
   translate: -50% 0;
 }
@@ -472,6 +473,8 @@ h6 {
 
 .input:focus {
   outline: none;
+  background-color: var(--color-light-gray);
+  color: var(--color-dark);
 }
 
 .training-types {
@@ -504,6 +507,10 @@ h6 {
   color: var();
 }
 
+.join-us {
+  background-color: var(--color-dark-alternate);
+}
+
 .join-us-video-wrapper {
   background: url("./images/join-us/join-us-bg.jpg") center/cover no-repeat
     var(--color-dark-alternate);
@@ -512,6 +519,12 @@ h6 {
   justify-content: center;
   align-items: center;
   position: relative;
+}
+
+.join-us-video {
+  width: 100%;
+  max-width: 960px;
+  height: auto;
 }
 
 .join-us-video-play-button {
@@ -598,6 +611,43 @@ h6 {
   max-width: 400px;
 }
 
+.join-us-form-body {
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+.location {
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.location-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 80px 15px;
+  text-align: center;
+}
+
+.location-map-image {
+  height: auto;
+}
+
+.location-title:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.location-description {
+  max-width: 490px;
+}
+
+.location-description:not(:last-child) {
+  margin-bottom: 37px;
+}
+
 @media (max-width: 1919px) {
   .motivation-card-image {
     margin-block: -20px;
@@ -647,6 +697,10 @@ h6 {
     max-width: 30%;
     height: auto;
     margin-block: 0;
+  }
+
+  .join-us-form-subtitle {
+    font-size: 16px;
   }
 }
 
@@ -708,5 +762,23 @@ h6 {
 
   .training-types-image {
     max-width: 120px;
+  }
+
+  .join-us-video-play-button {
+    width: 140px;
+  }
+
+  .join-us-title:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .join-us-form-subtitle {
+    font-size: 14px;
+  }
+
+  .join-us-form-body {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
   }
 }
