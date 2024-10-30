@@ -352,7 +352,172 @@
         </div>
       </section>
 
-      <section class="calculate"></section>
+      <section class="calculate">
+        <div class="calculate-inner container">
+          <div class="calculate-body">
+            <h2
+              class="calculate-title title-medium backdrop-title"
+              data-title="BMI"
+            >
+              Input your BMI
+            </h2>
+            <div class="calculate-description">
+              <p>
+                Duo graece ponderum ne, ei mel aliquando. Pro te tamquam
+                nonumes, nam no nemore epicurei
+              </p>
+            </div>
+            <form class="calculate-form">
+              <div class="calculate-form-body">
+                <label for="height" class="visually-hidden">Height</label>
+                <input
+                  type="number"
+                  id="height"
+                  placeholder="Height / cm"
+                  class="calculate-input input"
+                />
+
+                <label for="weight" class="visually-hidden">Weight</label>
+                <input
+                  type="number"
+                  id="weight"
+                  placeholder="Weight / kg"
+                  class="calculate-input input"
+                />
+
+                <label for="age" class="visually-hidden">Age</label>
+                <input
+                  type="number"
+                  id="age"
+                  placeholder="Age"
+                  class="calculate-input input"
+                />
+
+                <label for="gender" class="visually-hidden">Gender</label>
+                <select id="gender" class="calculate-input input" required>
+                  <option value="" selected disabled>Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">female</option>
+                </select>
+
+                <label for="activity-factor" class="visually-hidden"
+                  >Activity factor</label
+                >
+                <select
+                  id="activity-factor"
+                  class="calculate-input input wide"
+                  required
+                >
+                  <option value="" selected disabled>
+                    Select an activity factor
+                  </option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                </select>
+              </div>
+              <button type="submit" class="calculate-button button transparent">
+                Calculate
+              </button>
+            </form>
+          </div>
+          <div class="calculate-table-wrapper">
+            <table class="calculate-table">
+              <thead>
+                <tr>
+                  <th>BMI</th>
+                  <th>Weight status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Below 18.5</td>
+                  <td>Underweight</td>
+                </tr>
+
+                <tr>
+                  <td>18.5 - 24.9</td>
+                  <td>Healthy</td>
+                </tr>
+
+                <tr>
+                  <td>25.0 - 29.9</td>
+                  <td>Overweight</td>
+                </tr>
+
+                <tr>
+                  <td>30.0 - and Above</td>
+                  <td>Obese</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="2">
+                    <b>BMR</b> Metabolic Rate / <b>BMI</b> Body Mass Index
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer class="footer">
+      <div class="footer-main">
+        <div class="footer-main-inner container">
+          <header class="footer-header">
+            <a href="/" class="footer-logo">
+              <img
+                src="./images/logo.png"
+                alt="logo"
+                class="footer-logo-image"
+                width="270"
+                height="50"
+              />
+            </a>
+            <p class="footer-description">
+              please feel free to send us an e-mail at
+              <a href="mailto:kropp@qodeinteractive.com"
+                >kropp@qodeinteractive.com</a
+              >
+              For any additional inquiries
+            </p>
+          </header>
+          <div class="footer-body">
+            <div class="footer-column">
+              <h2 class="footer-column-title">About</h2>
+              <p class="footer-about">
+                Shape up your site with Kropp, a theme especially made for
+                fitness & gym websites.
+              </p>
+            </div>
+            <div class="footer-column">
+              <h2 class="footer-column-title">About</h2>
+              <p class="footer-about">
+                Shape up your site with Kropp, a theme especially made for
+                fitness & gym websites.
+              </p>
+            </div>
+            <div class="footer-column">
+              <h2 class="footer-column-title">About</h2>
+              <p class="footer-about">
+                Shape up your site with Kropp, a theme especially made for
+                fitness & gym websites.
+              </p>
+            </div>
+            <div class="footer-column">
+              <h2 class="footer-column-title">About</h2>
+              <p class="footer-about">
+                Shape up your site with Kropp, a theme especially made for
+                fitness & gym websites.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-extra">
+        <div class="footer-extra-inner container"></div>
+      </div>
+    </footer>
   </body>
 </html>
